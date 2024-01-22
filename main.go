@@ -12,13 +12,13 @@ import (
 
 func main() {
 	if len(os.Args) <= 1 || len(os.Args) > 3 {
-		fmt.Println("Error: Incorrect number of arguments")
+		fmt.Println("Usage: go run . [STRING] [BANNER]\n\nEX: go run . something standard")
 		return
 	}
 
 	arg := os.Args[1]
 	banner := "standard"
-	if len(os.Args) > 3 {
+	if len(os.Args) >= 3 {
 		banner = os.Args[2]
 	}
 
